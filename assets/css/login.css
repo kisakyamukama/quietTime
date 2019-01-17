@@ -1,0 +1,13 @@
+#login{
+    /* visibility: hidden; */
+    /* display: none;     */
+    /* text-align: center; */
+    color: blue;
+    background-image: red;
+   
+}
+
+.err{
+    color: red;
+    text-align: center;
+}

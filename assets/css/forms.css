@@ -1,0 +1,12 @@
+
+#devotionForm{
+    display: none;
+}
+
+#signup{
+    /* visibility: hidden; */
+}
+
+#error{
+    color: red;
+}
