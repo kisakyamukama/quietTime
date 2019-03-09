@@ -1,7 +1,7 @@
-<?php 
+<?php
         defined('BASEPATH') OR exit('No direct access script is allowed');
 
-        class Devotion_model extends CI_Model{
+        class DevotionModel extends CI_Model{
 
             public function __construct()
             {

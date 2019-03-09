@@ -6,7 +6,7 @@
             public function __construct()
             {
                 parent::__construct();
-                $this->load->model('devotion_model', 'info');
+                $this->load->model('devotionModel', 'info');
             }
 
 
@@ -17,12 +17,12 @@
 
                 $this->db->set('view_count', 'view_count+1', FALSE);
                 $this->db->where('devotionId', 1);
-                $this->db->update('devotions');                
+                $this->db->update('devotions');
             }
 
 
-            public function add_devotion()
-            {   
+            public function addDevotion()
+            {
                 //one method loads view and handles submission hene need to specify
                 if($this->input->post('submit') == null) //load form to add devotion
                     $this->load->view('devotion/add_devotion');
@@ -38,8 +38,8 @@
                     redirect('faith/index');
 
 
-                }              
-                    
+                }
+
             }
         }
 ?>
