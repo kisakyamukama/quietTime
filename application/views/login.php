@@ -10,13 +10,13 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/styles.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/forms.css">		
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/forms.css">
 	<title>Welcome</title>
 	<!-- <meta http-equiv="refresh" content="3"> -->
 </head>
 <body>
 	<div class="container">
-					<div class="jumbotron" id="header" onclick="show(0)"> 
+					<div class="jumbotron" id="header" onclick="show(0)">
 						<h4 class="page-header" onclick="show(0)" >Qt</h4>
 					</div>
 
@@ -24,11 +24,11 @@
 					<h3 class="btn btn-block btn-info" id="access_login" onclick="show('login')">Login</h3>
 					<h3 class="btn btn-block btn-success" onclick="show('signup')">Sign Up</h3>
 
-					
-					<!-- 
+
+					<!--
 
 
-															LOGIN FORM  
+															LOGIN FORM
 
 
 				     -->
@@ -42,11 +42,11 @@
 							<div class="form-group mx-sm-1 mb-2">
 								<label for="password" class="sr-only">Password</label>
 								<input type="password" class="form-control"   name="pass" placeholder="Enter password">
-							</div>				
+							</div>
 							<div class="form-group mb-2">
-								
+
 									<button type="submit" class="btn btn-primary">Access your account</button>
-							</div>								
+							</div>
 						</form>
 
 					</div>
@@ -56,20 +56,20 @@
 
 					<span class="err" style="text-align:center"><?php echo isset($form) ? $form : '' ?></span>
 
-			
-			
-			<!-- 
-					
-				
+
+
+			<!--
+
+
 				REGISTRATION FORM
-			
-			
-			
+
+
+
 			-->
 
 				                <div id="signup">	
 					                    <form  method="post" action="<?php echo  base_url();?>index.php/qt_controller/add_user"  class="needs-validation"  novalidate>
-					
+
 												<div class="form-row">
 													<div class="col-md-4 mb-3">
 														<label for="validationCustom01">First name</label>
@@ -91,7 +91,7 @@
 														</div>
 													</div>
 												</div>
-												
+
 												<div class="form-row">
 														<div class="col-md-4 mb-3">
 															<label for="validationCustom03">Gender</label>
@@ -108,7 +108,7 @@
 															<label for="validationCustom04">Residence</label>
 															<input type="text" class="form-control" id="validationCustom04" name="residence" placeholder="Residence" required>
 															<div class="invalid-feedback">Please provide a valid place.</div>
-														</div>							
+														</div>
 														<div class="col-md-3 mb-3">
 															<label for="validationCustom05">Zip</label>
 															<input type="number" class="form-control" id="validationCustom05" name="zip" placeholder="Zip" required>
@@ -120,13 +120,13 @@
 															<label for="validationCustom06">Password</label>
 																<input type="password" class="form-control" id="validationCustom06" name="pwd" placeholder="password" required>
 																<div class="invalid-feedback">Please enter a valid password</div>
-														</div>							
+														</div>
 														<div class="col-md-3 mb-3">
 															<label for="validationCustom07">Confirm password</label>
 															<input type="password" class="form-control" id="validationCustom07" name="cpwd" placeholder="confirm your password" required>
 															<div class="invalid-feedback">Please re-enter your password.</div>
 														</div>
-												</div>						
+												</div>
 												<div class="form-group">
 													<div class="form-check">
 														<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -141,16 +141,16 @@
 
 
 			<!--
-					
-				
-				
+
+
+
 				SCRIPTS
-			
-			
+
+
 			-->
 	<script>
 			function show(div){
-					switch(div){          
+					switch(div){
 								case 'login':
 									document.getElementById("login").style.visibility = 'visible';
 									document.getElementById("signup").style.visibility = 'hidden';
@@ -193,4 +193,3 @@
 	</script>
 </body>
 </html>
-

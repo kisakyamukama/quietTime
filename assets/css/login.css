@@ -1,5 +1,5 @@
 #login{
-    /* visibility: hidden; */
+    visibility: hidden;
     /* display: none;     */
     /* text-align: center; */
     color: blue;
@@ -10,4 +10,9 @@
 .err{
     color: red;
     text-align: center;
+}
+
+
+#signup{
+  visibility: hidden;
 }
