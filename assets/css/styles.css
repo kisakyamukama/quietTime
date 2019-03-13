@@ -2,14 +2,14 @@ body{
     margin: 0;
     padding: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+
 }
 
 
 #header{
     background-color:black;
     color: white;
-    height: 8em;
+    height: 16em;
     text-align: center;
     padding-top: 2em;
     font-family: 'Times New Roman', Times, serif;
@@ -24,7 +24,6 @@ body{
 }
 
 #user_data{
-   
+
     text-align: center;
 }
-

@@ -29,26 +29,46 @@
                     $user_name =  $this->session->userdata('username');
                  ?>
                   <!-- navbar -->
-                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <nav class="navbar navbar-expand-lg  text-white">
+                    <a class="navbar-brand" href="#">Quiet Time</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#" onclick="display()">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
+                          <a class="nav-link" onclick="display('profile')" id="profileBtn">Profile</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Devotions
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo  base_url('index.php/devotions/addDevotion'); ?>" >Add</a>
+                            <a class="dropdown-item" onclick="display('devotions')" id="devotionButton">View</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Some from others</a>
+                          </div>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                          <a class="nav-link " onclick="display('music')" id="musicButton">Music</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="<?php echo  base_url('index.php/sightInc/quote'); ?>">Idea-(s)</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="<?php echo  base_url('index.php/sightInc/quote') ?>">Quotes</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">About US</a></a>
                         </li>
                       </ul>
                       <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                       </form>
                     </div>
@@ -56,17 +76,20 @@
                   <!-- navbar -->
 
 
-        <div class="container">
-
-                <div class="jumbotron" id="header">
-                    <div class="page-header">
-                      <h1><marquee behavior="" direction="up" width="300" >My devotions..</marquee> </h1>
-                    </div>
 
 
+                <div class="page-header jumbotron" id="header">
+                  <div class="container">
+                      <!-- <h1><marquee behavior="" direction="up" width="300" >My devotions..</marquee> </h1> -->
+                      <h1 class="p-3">Quiet Time</h1>
+                      <!-- <h3>Time with God, feeding our souls, spirits and submitting our bodies and mind to the will and power of God</h3> -->
+                      <h5 class="p-2 text-primary">Home of devotions, ideas, quotes, teestimonies all to uplift our souls to walk in love holiness and the fear of God</h5>
+
+                  </div>
                 </div>
 
-                       <p>Welcome, <?php echo $user_name;  ?> <b id="date"></b> </p>
+                <div class="container">
+                     <p>Welcome, <?php echo $user_name;  ?> <b id="date"></b> </p>
 
                        <!--
                              Buttons for switching
@@ -79,16 +102,7 @@
 
                         <div  style="text-align:right">
 
-                            <button style="text-align:right; float:left;" class="btn btn-lg" onclick="display()">Home</button>
-                            <a class="btn btn-lg btn-info" onclick="display('profile')" id="profileBtn">Profile</a>
-                            <a class="btn btn-lg btn-info" onclick="display('devotions')" id="devotionButton">View devotions</a>
-                            <a class="btn btn-lg btn-info" onclick="display('music')" id="musicButton">Music list</a>
-
-
-                            <a type="button" id="ideaBtn" class="btn btn-danger btn-lg" href="<?php echo  base_url('index.php/sightInc/quote') ?>" >Ideas</a>
-                            <span type="button" class="btn btn-info btn-lg"><?php echo anchor('qt_controller/logout','Logout');?></span>
-                            <a type="button" class="btn btn-danger btn-lg" href="<?php echo  base_url('index.php/sightInc/quote') ?>" >Quote</a>
-                            <a type="button" class="btn btn-success  btn-lg" href="<?php echo  base_url('index.php/devotions/addDevotion') ?>" > Add a devotion</a>
+                          <span type="button" class="btn btn-info btn-lg"><?php echo anchor('qt_controller/logout','Logout');?></span>
                             <a type="button" class="btn btn-danger btn-lg" href="<?php echo  base_url('index.php/Qt_controller/logout') ?>" >Log out</a>
                         </div><br>
 
@@ -99,6 +113,7 @@
 
 
                                 <div  id="user_data">
+                                  
                                         <table class="table table-striped table-hover">
                                                 <caption>user profile</caption>
                                                 <thead class="thead-dark">
