@@ -14,7 +14,7 @@
 </head>
 <body>
 
-            <div class="container"> 
+            <div class="container">
 
                     <div class="jumbotron" id="header">
                                     <div class="page-header">
@@ -22,13 +22,13 @@
                                             <!-- <marquee behavior="" direction="up" width="30" > -->
                                                 Quiet Time devotions... <br> Jesus is my saviour
                                             <!-- </marquee> -->
-                                         </h1> 
+                                         </h1>
                                     </div>
                     </div>
 
                             <p>Hello, <?php echo $this->session->userdata('username'); ?> !</p>
                             <a type="button" class="btn btn-lg btn-info" href="<?php echo base_url('index.php/Qt_controller/view_devotions');?>">view devotions</a>
-                            <a type="button" class="btn btn-danger btn-lg" style="float:right" href="<?php echo  base_url('index.php/Qt_controller/logout') ?>" >Log out</a>                    
+                            <a type="button" class="btn btn-danger btn-lg" style="float:right" href="<?php echo  base_url('index.php/Qt_controller/logout') ?>" >Log out</a>
 
 
                             <hr>
@@ -37,27 +37,27 @@
                                                 <form  method="post" action="<?php echo base_url('index.php/Qt_controller/add_devotion'); ?>">
                                                         <div class="form-group">
                                                             <label for="">Title</label>
-                                                            <input type="text" class="form-control" name="title" placeholder="Title" required />                      
+                                                            <input type="text" class="form-control" name="title" placeholder="Title" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Scripture</label>
-                                                            <input type="text" class="form-control" name="scripture" placeholder="Scripture" required>                    
+                                                            <input type="text" class="form-control" name="scripture" placeholder="Scripture" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Devotion content (Enter devotion here ....) </label>
-                                                            <textarea name="lessons"  class="form-control" id=""  rows="10"  placeholder="Enter what you have understood here and the lessons you have learn" required></textarea>                    
+                                                            <textarea name="lessons"  class="form-control" id=""  rows="10"  placeholder="Enter what you have understood here and the lessons you have learn" required></textarea>
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="submit" class="form-control btn btn-success"  name="submit" value="save devotion">                    
+                                                            <input type="submit" class="form-control btn btn-success"  name="submit" value="save devotion">
                                                         </div>
-                                                        
-                                                </form>                               
-                
+
+                                                </form>
+
                                 </div>
 
 
 
-               
+
 
 
 
@@ -72,7 +72,7 @@
 
                 </div><!-- end container -->
 
-                
+
         <script>
                 function show(div){
                     switch(div)
