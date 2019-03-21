@@ -21,7 +21,7 @@
             $this->load->library('form_validation');
             $this->form_validation->set_rules('table','Table', 'required|trim');
             $this->form_validation->set_rules('insight', 'Insight','is_unique[Quote.insight]|is_unique[Testimony.insight]|is_unique[Idea.insight]');
-            $this->form_validation->set_rules('quote', 'Quote', 'trim|xss_clean|is_unique[quote.Quote]|min_length[5]|max_length[100]', array( 'is_unique' => 'This %s already exists.') );
+            $this->form_validation->set_rules('quote', 'Quote', 'trim|xss_clean|is_unique[Quote.Quote]|min_length[5]|max_length[100]', array( 'is_unique' => 'This %s already exists.') );
 
             if($this->form_validation->run()){
 
